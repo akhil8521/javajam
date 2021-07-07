@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D2B48C;
+    color: #221811;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #D2B48C;
+    color: #231814;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 105px;
+    height: 128px;
+    background-image: url(images/cup.jpg);
+    background-repeat: no-repeat;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link, header a:visited {
+    color: #231814;
+}
+
+header a:hover {
+    color: #fef6c2;
+}
+
+main {
+    padding-left: 0em;
+    padding-right: 0em;
+    padding-top: 0em;
+    padding-bottom: 2em;
+    display: block;
+    background-color: #FEF6C2;
+}
+
+.details {
+    padding: 0% 20%;
+    overflow: auto;
+}
+
+img {
+    padding: 0px 10px;
+}
+
+#homehero {
+    background-image: url(images/road.jpg);
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#heromugs {
+    background-image: url(images/threemugs.jpg);
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#heroguitar {
+    background-image: url(images/guitar.jpg);
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#herojobs {
+    background-image: url(images/coffeecup.jpg);
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    color: #8C3826;
+}
+
+h3, dt {
+    color: #8C3826;
+}
+
+h4 {
+    background-color: #D2B48C;
+    font-size: 1.2em;
+    padding-left: 0.5em;
+    padding-bottom: 0em;
+    border-bottom: 1px solid #221811;
+    text-transform: uppercase;
+    clear: left;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #FEF6C2;
+}
+
+nav a:visited {
+    color: #D2B48C;
+}
+
+nav a:hover {
+    color: #CC9933;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    list-style-type: none;
+}
+
+nav li {
+    border-bottom: 1px solid #FEF6C2;
+    padding: .5em 1em;
+    width: 100%;
+}
+
+footer {
+    background-color: #D2B48C;
+    font-size: 0.60em;
+    font-style: italic;
+    text-align: center;
+    padding: 1em;
+    border-top: 2px solid #8C3826;
+}
+
+#wrapper {
+    background-color: #231814;
+    padding: 0em;
+}
+
+main ul {
+    padding-left: 2em;
+}
+
+h2, h3, h4, p, div, ul, dl {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 10px;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #D2B48E;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input, textarea {
+    margin-bottom: .5em;
+}
+
+audio {
+    display: block;
+    margin-top: 1em;
+}
+
+@media (min-width: 600px) {
+    header {
+        padding-left: 0;
+        text-align: center;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    nav ul {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    #homehero {
+        background-image: url(images/hero.jpg);
+        height: 50vh;
+    }
+    #heromugs {
+        background-image: url(images/heromugs.jpg);
+    }
+    #heroguitar {
+        background-image: url(images/heroguitar.jpg);
+    }
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+    #mobile {
+        display: none;
+    }
+    #desktop {
+        display: inline;
+    }
+    .details {
+        display: flex;
+        flex-direction: row;
+    }
+    h4 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    form {
+        width: 40%;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 6em 1fr;
+    }
+    input[type="submit"] {
+        grid-column: 2 / 3;
+        width: 9em;
+    }
+    #herojobs {
+        background-image: url(images/herojobs.jpg)
+    }
+}
+
+@media (min-width: 1024px) {
+    @supports (display: grid) {
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+        }
+        main {
+            grid-area: main;
+        }
+        footer {
+            grid-area: footer;
+        }
+        #wrapper {
+            display: grid;
+            grid-template: "header header" "nav    main" "footer footer" / 200px;
+        }
+        nav ul {
+            flex-direction: column;
+        }
+        header {
+            background-image: url(images/coffeelogo.jpg);
+        }
+    }
+}
